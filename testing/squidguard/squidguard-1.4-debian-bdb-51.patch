@@ -18,7 +18,7 @@ diff -urN s07/src/sgDb.c s08/src/sgDb.c
    }
  #endif
 -#if DB_VERSION_MAJOR == 4
-+#if DB_VERSION_MAJOR == 4 || DB_VERSION_MAJOR == 5
++#if DB_VERSION_MAJOR >= 4
    if(globalUpdate || createdb || (dbfile != NULL && stat(dbfile,&st))){
      flag = DB_CREATE;
      if(createdb)
